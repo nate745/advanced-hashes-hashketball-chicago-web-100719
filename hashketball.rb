@@ -180,7 +180,7 @@ def player_numbers(team)
       a[:players].reduce({}) do |memo, (key, value)|
         jersey_numbers << a[:players][key][:number]
       end
-     end 
+     end
     end
   end
   return jersey_numbers.uniq
@@ -198,7 +198,7 @@ end
 
 
 def big_shoe_rebounds
-  big_shoe = 0 
+  big_shoe = 0
   rebounds = 0
   game_hash.reduce({}) do |memo, (key, value)|
     a = game_hash[key]
@@ -213,7 +213,7 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
-  most_points = 0 
+  most_points = 0
   most_points_name = ""
   game_hash.reduce({}) do |memo, (key, value)|
     a = game_hash[key]
@@ -229,7 +229,7 @@ def most_points_scored
 end
 
 def winning_team
-  winner_points = 0 
+  winner_points = 0
   winner_name = ""
   game_hash.reduce({}) do |memo, (key, value)|
     a = game_hash[key]
@@ -247,10 +247,10 @@ def winning_team
 end
 
 def player_with_longest_name
-  longest_name_length = 0 
+  longest_name_length = 0
   longest_name = ""
   game_hash.reduce({}) do |memo, (key, value)|
-    a = game_hash[key]  
+    a = game_hash[key]
     a[:players].reduce({}) do |memo, (key, value)|
       if key.length > longest_name_length
         longest_name_length = key.length
@@ -269,7 +269,7 @@ def long_name_steals_a_ton?
 end
 
 def most_rebounds_scored
-  most_points = 0 
+  most_points = 0
   most_points_name = ""
   game_hash.reduce({}) do |memo, (key, value)|
     a = game_hash[key]
@@ -282,4 +282,4 @@ def most_rebounds_scored
     end
   end
   return most_points_name
-end 
+end
