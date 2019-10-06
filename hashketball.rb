@@ -120,3 +120,17 @@ def game_hash
     }
   }
 end
+
+def num_points_scored(player)
+  game_hash.reduce({}) do |memo, (key, value)|
+    a = game_hash[key]
+    b = a[:players]
+    b.each_pair do |key, value|
+      if key == player
+        b[key].each_par do |key, value|
+          return value if key == :points
+        end
+      end
+    end
+  end
+end
