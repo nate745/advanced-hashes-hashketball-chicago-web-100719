@@ -127,7 +127,7 @@ def num_points_scored(player)
     b = a[:players]
     b.each_pair do |key, value|
       if key == player
-        b[key].each_par do |key, value|
+        b[key].each_pair do |key, value|
           return value if key == :points
         end
       end
